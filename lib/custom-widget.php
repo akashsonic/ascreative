@@ -287,7 +287,7 @@ echo $args['before_title'] . $title . $args['after_title'];
 query_posts('cat='.$selectedcategory.'&showposts='.$numberpost);
 if (have_posts()) {
 while (have_posts()) { the_post();
-?><li  class="postnew" ><a href="<?php the_permalink(); ?>"><?php the_content(); ?></a></li>
+?><li  class="postnew" ><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 <?php
 } // end while loop
 } // end if
