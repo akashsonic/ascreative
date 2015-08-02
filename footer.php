@@ -16,6 +16,22 @@ get_menu('footermenu','cssmenufooter','social');
 </div>
 <!-- Footer end -->
 </div>
+<script src="<?php echo get_template_directory_uri(); ?>/lib/js/as-custom-script.js" type="text/javascript" ></script>
+<script src="<?php echo get_template_directory_uri();?>/lib/js/bootstrap.min.js"></script>
 
+<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/lib/js/jquery.cycle.all.js"></script>
+<script type="text/javascript">
+$(function() {
+    $('.slider-box').cycle({
+        fx:     'turnDown',
+        speed:  'fast',
+        timeout: 3000,
+        pager:  '.view-position',
+		slideExpr: '.slider-show',
+	    prev:   '.slider-prev', 
+	    next:   '.slider-next', 
+    });
+});
+</script>
 </body>
 </html>

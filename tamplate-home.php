@@ -11,9 +11,9 @@ get_header();
             <div class="slider">
                 <div class="slider-box">
                     <div class="slider-hendle">
-                        <div class="go-prev" style="padding-top: 15px;"><a class="slider-prev"	style="padding: 10px; background-repeat: no-repeat;"	onclick="prevload()" /></a></div>
+                        <div class="go-prev" style="padding-top: 15px;"><a class="slider-prev"	style="padding: 10px; background-repeat: no-repeat;" /></a></div>
                         <div class="view-position"></div>
-                        <div class="go-next"><a class="slider-next"	style="padding: 10px; background-repeat: no-repeat;"	onclick="nextload()"></a></div>
+                        <div class="go-next"><a class="slider-next"	style="padding: 10px; background-repeat: no-repeat;"></a></div>
                     </div>
 
                     <?php
@@ -42,7 +42,7 @@ get_header();
                                 if(empty($excerpt)){
                                     $excerpt=$recent ["post_content"];
                                 }
-                                echo '<div class="slider-data slider-data' . $postid .'" data-img="' . $feat_image . '" style="display:none">                    <p class="post-title">' . $recent ["post_title"] . '</p>                    <p class="post-description">' . $excerpt  . '</p>                </div>';
+                                echo ' <div class="slider-show" style=" width: 95% ;    background-size: 100% 100%;    height: 280px;background-image:url(' . $feat_image . ');"><div class="slider-data slider-data' . $postid .'" data-img="' . $feat_image . '" >                    <p class="post-title">' . $recent ["post_title"] . '</p>                    <p class="post-description">' . $excerpt  . '</p>                </div></div>';
                             }
                         }
                     }

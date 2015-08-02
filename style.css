@@ -74,6 +74,7 @@ body {
 	float: right;
 	opacity: 0.5;
 	padding: 40px;
+	    margin-right: 51px;
 }
 
 .slider-hendle {
@@ -83,6 +84,9 @@ body {
 	float: right;
 	opacity: 0.5;
 	margin-left: 1px;
+	    position: absolute;
+    right: 0px;
+    z-index: 9;
 }
 
 .go-prev {
@@ -720,7 +724,7 @@ text-align: center;
   left: 0px;
   width: 244px;
   background: rgb(165, 84, 23);
-  z-index: 1;
+  z-index: 10;
   padding: 10px;
 	}
 #cssmenu ul{
@@ -823,7 +827,12 @@ padding-left: 0px;
 	.slider-data {
 	  width: 100%;
   height: 40%;
-  padding-top: 10px;	
+  padding-top: 10px;
+  margin-right: 0px;
+}
+.view-position a {
+    display: initial !important;
+    margin: 0px 5% !important;
 }
 #cssmenu ul ul ul a:before {
   content: ">";
@@ -868,9 +877,9 @@ body {
 
 .slider-hendle {
 	width: 100%;
-	height: 30px;
+	    height: 50px;
 	  margin-top: 139px;
-	margin-top: 250px;
+	margin-top: 230px;
   position: relative;
   margin-bottom: -144px;
 }
@@ -880,7 +889,7 @@ body {
   float: left;
   margin-top: 0px;
   transform: rotate(-90deg);
- height: 30px;
+    height: 50px;
   width: 10%;	
 		
 }
@@ -889,7 +898,7 @@ body {
 	.view-position{
 		float: left ;
   height: 30px;
-  padding: 9px;
+      padding: 15px;
   width: 80%;
 }
 	.view-position img{
@@ -899,7 +908,7 @@ margin: 2px !important;
 		 float: left;
   padding-top: 15px;
   transform: rotate(270deg);
-  height: 30px;
+      height: 50px;
   width: 10%;
 }
 #content{
@@ -1047,4 +1056,11 @@ font-size: 13px;
 width: 85%;
 	}
 
+}
+.view-position a {
+    display: block;
+    margin: 50% 0px;
+}
+.slider-show{
+	width: 100% !important;
 }
