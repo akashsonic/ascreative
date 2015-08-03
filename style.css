@@ -902,7 +902,7 @@ and (max-width: 850px) {
     .view-position a {
         display: block;
         float: left;
-        margin: 0px 5% !important;
+        margin: 0px 5px !important;
     }
 
     #cssmenu ul ul ul a:before {
@@ -962,7 +962,7 @@ and (max-width: 850px) {
     .go-prev {
         padding-top: 10px;
         float: left;
-        margin-top: 0px;
+        margin-top: 0;
         transform: rotate(-90deg);
         height: 50px;
         width: 10%;
@@ -1156,6 +1156,11 @@ and (max-device-width: 800px) {
     width: 10px;
     height: 10px;
     font-size: 0px;
+}
+
+.view-position .nav-buttons {
+    display: inline-block;
+    overflow: hidden;
 }
 
 .view-position .activeSlide {
