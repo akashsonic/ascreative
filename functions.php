@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 
 /**
@@ -15,7 +15,7 @@ require( get_template_directory() . '/lib/theme-options.php' );
 require( get_template_directory() . '/lib/as-custom-functions.php' );
 
 /**
- * This is register new post type for slider. custom_post_type() 
+ * This is register new post type for slider. custom_post_type()
  *
  */
 function custom_post_type() {
@@ -46,7 +46,7 @@ function custom_post_type() {
 		'hierarchical'        => true,
 		'public'              => true,
 		'show_ui'             => true,
-		'show_in_menu'        => true,		
+		'show_in_menu'        => true,
 		'menu_position'       => 5,
 		'show_in_admin_bar'   => true,
 		'show_in_nav_menus'   => true,
@@ -61,11 +61,11 @@ function custom_post_type() {
 }
 add_action( 'init', 'custom_post_type', 0 );
 /**
- * This function for get menu. get_menu() 
+ * This function for get menu. get_menu()
  *
  */
 function get_menu($menu,$container_id,$themelocation){
-	$defaults = array(	
+	$defaults = array(
 	'menu'            => $menu,
 	'container_id'    => $container_id,
 	'theme_location' => $themelocation,
@@ -73,18 +73,18 @@ function get_menu($menu,$container_id,$themelocation){
 return wp_nav_menu( $defaults );
 }
 /**
- * This function for get theme option data. get_custom_data() 
+ * This function for get theme option data. get_custom_data()
  *
  */
 function get_custom_data($key){
 	$saved = (array) get_option( 'as_theme_options' );
 	$defaults = array(
-			$key			=> '',		
+			$key			=> '',
 	);
 	$defaults = apply_filters( 'as_default_theme_options', $defaults );
 	$Theme_options = wp_parse_args( $saved, $defaults );
 	$Theme_options = array_intersect_key( $Theme_options, $defaults );
-	
+
 	if($Theme_options[$key]=="" && $key=="upload_header_logo"){
 	$Theme_options[$key]=get_template_directory_uri()."/images/logo.png";
 	}else if($Theme_options[$key]=="" && $key=="upload_Footer_logo"){
@@ -92,17 +92,17 @@ function get_custom_data($key){
 	}else if($Theme_options[$key]=="" && $key=="as_footer_area_text"){
 	$Theme_options[$key]="Footer copywrite text";
 	}
-	
-	
+
+
 	return $Theme_options[$key];
 }
 function get_parent_page_data($parentid){
 $args = array(
-                        'sort_order' => 'ASC',						
+                        'sort_order' => 'ASC',
                         'sort_column' => 'post_title',
-                        'hierarchical' => 1,                       
+                        'hierarchical' => 1,
                         'child_of' => 0,
-                        'parent' => $parentid,                        
+                        'parent' => $parentid,
                         'offset' => 0,
                         'post_type' => 'page',
                         'post_status' => 'publish'
@@ -115,7 +115,7 @@ function my_custom_init() {
 }
 add_action('init', 'my_custom_init');
 function get_post_content_img($Post_content){
-                	$matches="";                  
+                	$matches="";
 	                $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $Post_content, $matches);
 	  				$feat_image = $matches[1][0];
 	  				return $feat_image;

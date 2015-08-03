@@ -12,7 +12,7 @@ get_header();
                 <div class="slider-box">
                     <div class="slider-hendle">
                         <div class="go-prev" style="padding-top: 15px;"><a class="slider-prev"	style="padding: 10px; background-repeat: no-repeat;" /></a></div>
-                        <div class="view-position"></div>
+                        <div class="view-position"><div class="nav-buttons"></div></div>
                         <div class="go-next"><a class="slider-next"	style="padding: 10px; background-repeat: no-repeat;"></a></div>
                     </div>
 
@@ -134,4 +134,3 @@ get_header();
     <!-- widget end -->
 <?php
 get_footer();
-?>

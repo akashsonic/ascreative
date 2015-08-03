@@ -1,3 +1,8 @@
+<?php
+/*
+ * Template Name: Home
+ * Description: A Page index design.
+ */
 get_header();
 ?>
     <div id="main">
@@ -7,7 +12,7 @@ get_header();
                 <div class="slider-box">
                     <div class="slider-hendle">
                         <div class="go-prev" style="padding-top: 15px;"><a class="slider-prev"	style="padding: 10px; background-repeat: no-repeat;" /></a></div>
-                        <div class="view-position"></div>
+                        <div class="view-position"><div class="nav-buttons"></div></div>
                         <div class="go-next"><a class="slider-next"	style="padding: 10px; background-repeat: no-repeat;"></a></div>
                     </div>
 
@@ -33,9 +38,9 @@ get_header();
                         if($postid!=6){
                             if(!empty($feat_image)){
                                 $postid ++;
-                                $excerpt=$recent ["post_excerpt"];
+                                $excerpt = $recent ["post_excerpt"];
                                 if(empty($excerpt)){
-                                    $excerpt=$recent ["post_content"];
+                                    $excerpt = wp_strip_all_tags($recent ["post_content"]);
                                 }
                                 echo ' <div class="slider-show" style=" width: 95% ;    background-size: 100% 100%;    height: 280px;background-image:url(' . $feat_image . ');"><div class="slider-data slider-data' . $postid .'" data-img="' . $feat_image . '" >                    <p class="post-title">' . $recent ["post_title"] . '</p>                    <p class="post-description">' . $excerpt  . '</p>                </div></div>';
                             }
@@ -89,7 +94,7 @@ get_header();
                                                 }
                                                 $excerpt = $wp_pages_sub->post_excerpt;
                                                 if(empty($excerpt)){
-                                                    $excerpt=get_post_limit_content($wp_pages_sub->post_content);
+                                                    $excerpt=wp_strip_all_tags(get_post_limit_content($wp_pages_sub->post_content));
                                                 }
                                                 $sub_child_data.= '<div class="col-md-4 allchild childpage' . $dataparent . '" style="padding: 15px;' . $dataclass_sub . '  padding-right: 0px;"><img class="child-images" src="' . $feat_image . '" /><p ><a href="" class="child-page-tile">' . $wp_pages_sub->post_title . '</a></p><p class="child-page-content">' . $excerpt  . '</p></div>';
                                             }
@@ -129,4 +134,3 @@ get_header();
     <!-- widget end -->
 <?php
 get_footer();
-?>

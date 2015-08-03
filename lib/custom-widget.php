@@ -20,16 +20,7 @@
 
 endif; // AScreative_setup
 add_action ( 'after_setup_theme', 'AScreative_setup' );
-// Custom Function to Include
-function favicon_link() {
-	echo '<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />' . "\n";
-}
-add_action ( 'wp_head', 'favicon_link' );
-if (! function_exists ( 'theme_special_nav' )) {
-	function theme_special_nav() {
-		//  Do something.
-	}
-}
+
 
 
 register_sidebar( array(
