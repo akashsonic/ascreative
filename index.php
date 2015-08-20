@@ -1,8 +1,4 @@
 <?php
-/*
- * Template Name: Home
- * Description: A Page index design.
- */
 get_header();
 ?>
     <div id="main">
@@ -96,7 +92,7 @@ get_header();
                                                 if(empty($excerpt)){
                                                     $excerpt=wp_strip_all_tags(get_post_limit_content($wp_pages_sub->post_content));
                                                 }
-                                                $sub_child_data.= '<div class="col-md-4 allchild childpage' . $dataparent . '" style="padding: 15px;' . $dataclass_sub . '  padding-right: 0px;"><img class="child-images" src="' . $feat_image . '" /><p ><a href="" class="child-page-tile">' . $wp_pages_sub->post_title . '</a></p><p class="child-page-content">' . $excerpt  . '</p></div>';
+                                                $sub_child_data.= '<div class="col-md-4 allchild childpage' . $dataparent . '" style="padding: 15px;' . $dataclass_sub . '  padding-right: 0px;"><img class="child-images" src="' . $feat_image . '" /><p ><a href="'.get_permalink ($wp_pages_sub->ID).'" class="child-page-tile">' . $wp_pages_sub->post_title . '</a></p><p class="child-page-content">' . $excerpt  . '</p></div>';
                                             }
                                         }
                                     }

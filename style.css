@@ -41,6 +41,7 @@ body {
     background: beige;
     height: 100%;
     background-size: 100% 100%;
+    position: relative;
 }
 
 .slider-active, .slider-unactive {
@@ -146,11 +147,11 @@ body {
 }
 
 li.postnew {
-    background-image: url(images/footer-bullet.jpg);
+    background: url(images/footer-bullet.jpg)0 7px;
     width: 100%;
     padding-left: 15px;
     background-repeat: no-repeat;
-    background-position-y: 7px;
+
 }
 
 li.postnew:hover {
@@ -325,7 +326,8 @@ ul.sociallink li a {
 }
 
 ul.sociallink li .facebook {
-    background-position-y: -116px;
+    background:url(images/social-icons.jpg) 0 -116px;
+    background-repeat: no-repeat;
 }
 
 ul.sociallink li .facebook:HOVER {
@@ -334,30 +336,41 @@ ul.sociallink li .facebook:HOVER {
 }
 
 ul.sociallink li .twitter {
-    background-position-y: -145px;
+
+background:url(images/social-icons.jpg) 0 -145px;
+    background-repeat: no-repeat;
 }
 
 ul.sociallink li .twitter:HOVER {
     color: #31CDFE !important;
-    background-position-y: -29px;
+   background:url(images/social-icons.jpg) 0 -29px;
+    background-repeat: no-repeat;
+
 }
 
+
 ul.sociallink li .linkedin {
-    background-position-y: -174px;
+    background:url(images/social-icons.jpg) 0 -174px;
+    background-repeat: no-repeat;
 }
 
 ul.sociallink li .linkedin:HOVER {
     color: #006E9E !important;
-    background-position-y: -58px;
+    background:url(images/social-icons.jpg) 0 -58px;
+    background-repeat: no-repeat;
 }
 
 ul.sociallink li .rss {
-    background-position-y: -203px;
+
+
+    background:url(images/social-icons.jpg) 0 -203px;
+    background-repeat: no-repeat;
 }
 
 ul.sociallink li .rss:HOVER {
     color: #FF9808 !important;
-    background-position-y: -87px;
+    background:url(images/social-icons.jpg) 0 -87px;
+    background-repeat: no-repeat;
 }
 
 ul.sociallink li {
@@ -971,8 +984,8 @@ and (max-width: 850px) {
 
     .view-position {
         float: left;
-        height: 30px;
-        padding: 15px;
+            height: 50px;
+    padding: 23px;
         width: 80%;
     }
 
@@ -982,7 +995,7 @@ and (max-width: 850px) {
 
     .go-next {
         float: left;
-        padding-top: 15px;
+            padding-top: 30px;
         transform: rotate(270deg);
         height: 50px;
         width: 10%;
@@ -1073,7 +1086,9 @@ and (max-width: 700px) {
     #content {
         width: 90%;
     }
-
+.col-md-4{
+width: 100% !important;	
+}
     .slider-new {
         background: #EBEBEB;
         height: inherit;
@@ -1170,4 +1185,16 @@ and (max-device-width: 800px) {
 
 .slider-show {
     width: 100% !important;
+}
+.col-md-4{
+width: 33.33%;	
+}
+#post-title{	
+	margin: 0;
+	border-top: 2px solid rgb(165, 84, 23) ;
+	border-bottom: 2px solid rgb(165, 84, 23) ;
+}
+#postmain{
+	    height: 100%;
+background: #fff;	
 }

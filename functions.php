@@ -121,6 +121,6 @@ function get_post_content_img($Post_content){
 	  				return $feat_image;
                 }
                 function get_post_limit_content($Post_content){
-                	return  wp_trim_words( $Post_content, $num_words = 55, $more = null );
+                	return  wp_trim_words( $Post_content, $num_words = 15, $more = null );
                 }
 ?>
