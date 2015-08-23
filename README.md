@@ -7,7 +7,7 @@
 * **License:** [GPL v2 or later] (http://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Description ##
-	This is One Wordpress Theme, Which is use for display detail of post data and you can also show data in slider
+	This is One Wordpress Theme, Which is use for display detail of post data and you can also show data in slider.
 
 ## Installation ##
 
