@@ -197,6 +197,7 @@ class wpb_widget_c extends WP_Widget {
 
 function __construct() {
 
+	// create Choice Category Post widget
 parent::__construct(
 
 'wpb_widget_c',
