@@ -665,7 +665,7 @@ ul.sociallink li {
 #cssmenu > ul {
     text-align: center;
     color: #666;
-
+	display: inline-block;
 }
 
 #cssmenu ul ul {
