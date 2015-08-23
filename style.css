@@ -6,8 +6,7 @@ Version: 1.0.0
 @import url(http://fonts.googleapis.com/css?family=Tahoma);
 
 body {
-    text-align: center;
-    background-image: url(images/body-bg.jpg);
+    text-align: center;   
     margin: 0px;
     background-repeat: repeat-x;
 }
