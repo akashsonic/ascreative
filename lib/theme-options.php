@@ -96,13 +96,13 @@ function upload_header_logo() {
 function upload_Footer_logo() {
 	$footer_options = as_get_theme_options();
 	$footerlogo=esc_attr( $footer_options[ 'upload_Footer_logo' ] );
-	if(empty($footerlogo)){
+	if($footerlogo!=""){
 		$footerlogo=get_template_directory_uri()."/images/footer-logo.png";
 	}
 		?>
-	<input class="text"  type="hidden" name="" id="upload_Footer_logo_Default" value="<?php echo get_template_directory_uri()."/images/footer-logo.png"; ?>" style="  width: 50%;" />
 	<input class="text"  type="hidden" name="as_theme_options[upload_Footer_logo]" id="upload_Footer_logo" value="<?php echo $footerlogo;?>" style="  width: 50%;" />
 	<img src="<?php echo $footerlogo; ?>" id="Footer_Logo_Image" style="  width: 200px;  height: 60px;" />
+	<input class="text"  type="hidden" name="" id="upload_Footer_logo_Default" value="<?php echo get_template_directory_uri()."/images/footer-logo.png"; ?>" style="  width: 50%;" />
 	<input type="button" id="Set_upload_footer" class="button button-primary" onclick="Set_Logo('Footer_Logo','Get')" value="Footer Logo upload"/>
 	<input type="button" id="Reaset_upload_footer" class="button button-primary" onclick="Set_Logo('Reaset_footer_Logo','Set')" value="Reset Logo"/>
 	
