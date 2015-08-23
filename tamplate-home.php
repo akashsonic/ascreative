@@ -36,17 +36,6 @@ get_header();
             </div>
             <!-- Home child post end  -->
         </div>
-    </div>
-    <!-- widget start -->
-    <div id="widget">
-        <div class="widgetbox row">
-            <div class="col-md-12">
-                <?php
-                dynamic_sidebar('page-menu');
-                ?>
-            </div>
-        </div>
-    </div>
-    <!-- widget end -->
+    </div>   
 <?php
 get_footer();
