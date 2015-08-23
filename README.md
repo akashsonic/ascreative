@@ -195,7 +195,7 @@
 
 
 
-**Now complite theme setup steps**
+**Now complete theme setup steps**
 
 Thank You...
 
