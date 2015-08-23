@@ -96,7 +96,7 @@ function upload_header_logo() {
 function upload_Footer_logo() {
 	$footer_options = as_get_theme_options();
 	$footerlogo=esc_attr( $footer_options[ 'upload_Footer_logo' ] );
-	if($footerlogo!=""){
+	if($footerlogo==""){
 		$footerlogo=get_template_directory_uri()."/images/footer-logo.png";
 	}
 		?>

@@ -38,7 +38,7 @@
                                                     $feat_image= get_post_content_img($wp_pages_sub->post_content);
                                                     
                                                 }
-                                            	if($feat_image!="") {
+                                            	if($feat_image=="") {
                                                     $feat_image= get_template_directory_uri()."/images/no-image.png";
                                                 }
                                                 $excerpt = $wp_pages_sub->post_excerpt;
