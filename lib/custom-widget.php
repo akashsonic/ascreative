@@ -34,7 +34,7 @@ register_sidebar( array(
 
 add_filter( 'wp_page_menu', 'my_page_menu' );
 
-function my_page_menu( $menu ) {
+function my_page_menu() {
 	dynamic_sidebar( 'page-menu' );
 }
 
@@ -51,9 +51,6 @@ parent::__construct(
 // Base ID of your widget
 
 'wpb_widget',
-
- 
-
 // Widget name will appear in UI
 
 __('Social Links', 'wpb_widget_domain'),

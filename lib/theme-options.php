@@ -8,7 +8,7 @@
  */
 
 
-function as_admin_enqueue_scripts( $hook_suffix ) {
+function as_admin_enqueue_scripts(  ) {
 	wp_enqueue_style( 'as-theme-options', get_template_directory_uri() . '/theme-options/theme-options.css', false, '' );
 	
 }
@@ -36,29 +36,15 @@ function as_theme_options_init() {
 }
 add_action( 'admin_init', 'as_theme_options_init' );
 
-/**
- * Change the capability required to save the 'as_options' options group.
- *
- * @see as_theme_options_init() First parameter to register_setting() is the name of the options group.
- * @see as_theme_options_add_page() The edit_theme_options capability is used for viewing the page.
- *
- * @param string $capability The capability used for the page, which is manage_options by default.
- * @return string The capability to actually use.
- */
-function as_option_page_capability( $capability ) {
+
+function as_option_page_capability(  ) {
 	return 'edit_theme_options';
 }
 add_filter( 'option_page_capability_as_options', 'as_option_page_capability' );
 
-/**
- * Add our theme options page to the admin menu.
- *
- * This function is attached to the admin_menu action hook.
- *
- * @since as 1.1
- */
+
 function as_theme_options_add_page() {
-	$theme_page = add_theme_page(
+	add_theme_page(
 		__( 'Theme Options', 'as' ),   // Name of page
 		__( 'Theme Options', 'as' ),   // Label in menu
 		'edit_theme_options',          // Capability required
@@ -68,11 +54,6 @@ function as_theme_options_add_page() {
 }
 add_action( 'admin_menu', 'as_theme_options_add_page' );
 
-/**
- * Returns the options array for as.
- *
- * @since as 1.1
- */
 function as_get_theme_options() {
 	$saved = (array) get_option( 'as_theme_options' );
 	$defaults = array(		
@@ -88,9 +69,6 @@ function as_get_theme_options() {
 
 
 
-/**
- * Renders the Footer Area Text setting field.
- */
 function as_footer_area_text() {
 	$options = as_get_theme_options();
 	?>
@@ -177,11 +155,7 @@ wp_enqueue_script( 'media-upload' );
 }
 
 
-/**
- * Renders the Theme Options administration screen.
- *
- * @since as 1.1
- */
+
 function as_theme_options_render_page() {
 	?>
 	<div class="wrap">
@@ -202,22 +176,10 @@ function as_theme_options_render_page() {
 	<?php
 }
 
-/**
- * Sanitize and validate form input. Accepts an array, return a sanitized array.
- *
- * @see as_theme_options_init()
- * @todo set up Reset Options action
- *
- * @param array $input Unknown values.
- * @return array Sanitized theme options ready to be stored in the database.
- *
- * @since as 1.1
- */
+
 function as_theme_options_validate( $input ) {
 	$output = array();
-
 	
-	// Footer Area Text
 	if ( isset( $input[ 'as_footer_area_text' ] ) && ! empty( $input[ 'as_footer_area_text' ] ) )
 		$output[ 'as_footer_area_text' ] = strip_tags( $input[ 'as_footer_area_text' ] );
 

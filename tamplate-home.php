@@ -62,15 +62,15 @@ get_header();
                         $datac = 0;
                         $dataactive = "";
                         $alldata = "";
-                        foreach ($all_wp_pages as $wp_pages) {
+                         for($i=0; $i<count($all_wp_pages); $i++) {
+                        	$wp_pages=$all_wp_pages[$i];
                             $all_wp_pages_child = get_parent_page_data($wp_pages->ID);
-                            $tcountchild = 0;
-                            foreach ($all_wp_pages_child as $wp_pages_child) {
-                                $tcountchild++;
-                            }
+                           $tcountchild= count($all_wp_pages_child);
+                            
+                             
                             $dataparent = $wp_pages->post_parent;
-                            if ($tcountchild != 0) {
-                                if ($dataparent == $frontpage_id) {
+                            if ($tcountchild != 0 && !empty($tcountchild)) {
+                                 if ($dataparent == $frontpage_id) {
                                     $dataclass = "";
                                     if ($datac == 0) {
                                         $dataactive = $wp_pages->ID;

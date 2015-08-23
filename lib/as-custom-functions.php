@@ -15,4 +15,3 @@ function as_custom_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'as_custom_scripts' );
 
-?>

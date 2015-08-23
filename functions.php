@@ -116,11 +116,10 @@ function my_custom_init() {
 add_action('init', 'my_custom_init');
 function get_post_content_img($Post_content){
                 	$matches="";
-	                $output = preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $Post_content, $matches);
+	                preg_match_all('/<img.+src=[\'"]([^\'"]+)[\'"].*>/i', $Post_content, $matches);
 	  				$feat_image = $matches[1][0];
 	  				return $feat_image;
                 }
                 function get_post_limit_content($Post_content){
                 	return  wp_trim_words( $Post_content, $num_words = 15, $more = null );
                 }
-?>
