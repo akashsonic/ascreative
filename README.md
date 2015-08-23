@@ -17,7 +17,7 @@
 1. Download Theme.
    [Download] (https://github.com/akashsonic/ascreative/archive/master.zip)
 
-2. Go to ** Appearance > Themes ** in the WordPress Dashboard
+2. Go to **Appearance > Themes** in the WordPress Dashboard
 
 3. Click on the Add New button
 
