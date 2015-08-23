@@ -94,8 +94,8 @@ function upload_header_logo() {
 	<?php
 }
 function upload_Footer_logo() {
-	$options = as_get_theme_options();
-	$footerlogo=esc_attr( $options[ 'upload_Footer_logo' ] );
+	$footer_options = as_get_theme_options();
+	$footerlogo=esc_attr( $footer_options[ 'upload_Footer_logo' ] );
 	if(empty($footerlogo)){
 		$footerlogo=get_template_directory_uri()."/images/footer-logo.png";
 	}
@@ -176,19 +176,21 @@ function as_theme_options_render_page() {
 	<?php
 }
 
-
 function as_theme_options_validate( $input ) {
 	$output = array();
-	
-	if ( isset( $input[ 'as_footer_area_text' ] ) && ! empty( $input[ 'as_footer_area_text' ] ) )
-		$output[ 'as_footer_area_text' ] = strip_tags( $input[ 'as_footer_area_text' ] );
 
-	if ( isset( $input[ 'upload_header_logo' ] ) && ! empty( $input[ 'upload_header_logo' ] ) )
-		$output[ 'upload_header_logo' ] = strip_tags( $input[ 'upload_header_logo' ] );
-		
-	if ( isset( $input[ 'upload_Footer_logo' ] ) && ! empty( $input[ 'upload_Footer_logo' ] ) )
-		$output[ 'upload_Footer_logo' ] = strip_tags( $input[ 'upload_Footer_logo' ] );
 	
+	// Footer Area Text
+	$output["as_footer_area_text"]=setFooterAreaText("as_footer_area_text",$input);
+	$output["upload_header_logo"]=setFooterAreaText("upload_header_logo",$input);
+	$output["upload_Footer_logo"]=setFooterAreaText("upload_Footer_logo",$input);
+		
 	return apply_filters( 'as_theme_options_validate', $output, $input );
 
+}
+
+
+function setFooterAreaText ( $text_id, $input ){
+	if ( isset( $input[ $text_id ] ) && ! empty( $input[ $text_id ] ) )
+		return strip_tags( $input[ $text_id ] );
 }
