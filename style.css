@@ -1,5 +1,7 @@
 /*
 Theme Name: AS creative
+Author:Akash soni
+Version: 1.0.0
 */
 @import url(http://fonts.googleapis.com/css?family=Tahoma);
 
@@ -1005,7 +1007,7 @@ and (max-width: 850px) {
         width: 10%;
     }
 
-    #content,.slider  {
+    #content,.slider {
         width: 80%;
     }
 
@@ -1194,9 +1196,13 @@ and (max-device-width: 800px) {
 width: 33.33%;	
 }
 #post-title{	
-	margin: 0;
-	border-top: 2px solid rgb(165, 84, 23) ;
-	border-bottom: 2px solid rgb(165, 84, 23) ;
+	    margin: 0;
+     background-color: #eee;
+    padding: 10px;
+    font-family: georgia;
+    font-style: oblique;
+        width: 100%;
+    margin: 0 auto;
 }
 #postmain{
 	    height: 100%;
