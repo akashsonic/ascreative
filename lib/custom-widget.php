@@ -40,22 +40,9 @@ function my_page_menu() {
 
 // Creating the widget
 
-class wpb_widget extends WP_Widget {
-
- 
-
+class Social_Widget extends WP_Widget {
 function __construct() {
-
-	parent::__construct( 
-	
-	'wpb_widget',
-	
-	__('Social Links', 'wpb_widget_domain'),
-	
-	array( 'description' => __( 'This widget for set Social links', 'wpb_widget_domain' ), )
-	
-	);
-
+	parent::__construct( 'Social_Widget',__('Social Links', 'wpb_widget_domain'),	array( 'description' => __( 'This widget for set Social links', 'wpb_widget_domain' ), ));
 }
 
 
@@ -165,7 +152,7 @@ return $instance;
 
 }
 
-} // Class wpb_widget ends here
+} // Class Social_Widget ends here
 
  
 function setSlocialData($text_id,$instance){
@@ -180,7 +167,7 @@ return $instance[$text_id];
 
 function wpb_load_widget() {
 
-    register_widget( 'wpb_widget' );
+    register_widget( 'Social_Widget' );
 
 }
 
@@ -191,7 +178,7 @@ add_action( 'widgets_init', 'wpb_load_widget' );
 
 // Creating the widget
 
-class wpb_widget_c extends WP_Widget {
+class Category_Post_Widget extends WP_Widget {
 
  
 
@@ -200,7 +187,7 @@ function __construct() {
 	// create Choice Category Post widget
 parent::__construct(
 
-'wpb_widget_c',
+'Category_Post_Widget',
 
 __('Choice Category Post', 'wpb_widget_domain_c'),
 
@@ -358,7 +345,7 @@ return $instance;
 
 }
 
-} // Class wpb_widget ends here
+} // Class Social_Widget ends here
 
  
 
@@ -366,6 +353,6 @@ return $instance;
 
 function wpb_load_widget_c() {
 
-    register_widget( 'wpb_widget_c' );
+    register_widget( 'Category_Post_Widget' );
 
 }
