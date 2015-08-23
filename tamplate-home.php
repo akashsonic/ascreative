@@ -7,7 +7,7 @@ get_header();
 ?>
     <div id="main">
     <!-- Slider start -->
-	<div class="based-slider">
+		<div class="based-slider">
             <div class="slider">
                 <div class="slider-box">
                     <div class="slider-hendle">
@@ -22,7 +22,7 @@ get_header();
                     ?>
                 </div>
             </div>
-</div>
+		</div>
             <!-- Slider end -->
         <div id="content">           
             <!-- Home child post start -->
