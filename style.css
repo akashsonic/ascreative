@@ -155,7 +155,7 @@ li.postnew {
     width: 100%;
     padding-left: 15px;
     background-repeat: no-repeat;
-
+	margin-bottom: 5px;
 }
 
 li.postnew:hover {
