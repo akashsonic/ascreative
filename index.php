@@ -2,8 +2,8 @@
 get_header();
 ?>
     <div id="main">
-        <div id="content">
-            <!-- Slider start -->
+    <!-- Slider start -->
+	<div class="based-slider">
             <div class="slider">
                 <div class="slider-box">
                     <div class="slider-hendle">
@@ -13,11 +13,14 @@ get_header();
                     </div>
 
                     <?php
-                    get_template_part("loop","slider");
+                   get_template_part("loop","slider");
+
                     ?>
                 </div>
             </div>
+</div>
             <!-- Slider end -->
+        <div id="content">         
             <!-- Home child post start -->
             <div class="slider-new">
                <?php

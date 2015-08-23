@@ -14,7 +14,11 @@ body {
     display: block;
     margin: 0px auto;
 }
-
+.based-slider{
+width:100%;
+    background-color: #8A8B8F;
+    padding: 20px 0;
+}
 .sub-page {
     height: 100%;
     background: #fff;
@@ -29,11 +33,11 @@ body {
 }
 
 .slider {
+    margin: 0 auto;
     background: #fff;
     height: 300px;
-    margin-top: 20px;
     padding: 10px;
-    width: 100%;
+    width: 75%;
 }
 
 .slider-box {
@@ -1001,7 +1005,7 @@ and (max-width: 850px) {
         width: 10%;
     }
 
-    #content {
+    #content,.slider  {
         width: 80%;
     }
 
@@ -1083,7 +1087,7 @@ and (max-width: 700px) {
         margin-top: 0px;
     }
 
-    #content {
+    #content,.slider  {
         width: 90%;
     }
 .col-md-4{
@@ -1156,7 +1160,7 @@ and (max-device-width: 800px) {
         font-size: 12px;
     }
 
-    #content {
+    #content,.slider{
         width: 85%;
     }
 
