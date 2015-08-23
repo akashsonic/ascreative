@@ -46,30 +46,19 @@ class wpb_widget extends WP_Widget {
 
 function __construct() {
 
-parent::__construct(
-
-// Base ID of your widget
-
-'wpb_widget',
-// Widget name will appear in UI
-
-__('Social Links', 'wpb_widget_domain'),
-
- 
-
-// Widget description
-
-array( 'description' => __( 'This widget for set Social links', 'wpb_widget_domain' ), )
-
-);
+	parent::__construct( 
+	
+	'wpb_widget',
+	
+	__('Social Links', 'wpb_widget_domain'),
+	
+	array( 'description' => __( 'This widget for set Social links', 'wpb_widget_domain' ), )
+	
+	);
 
 }
 
- 
 
-// Creating widget front-end
-
-// This is where the action happens
 
 public function widget( $args, $instance ) {
 
@@ -106,63 +95,32 @@ echo $args['after_widget'];
 
 public function form( $instance ) {
 
-if ( isset( $instance[ 'title' ] ) ) {
-
-$title = $instance[ 'title' ];
-
-}
-
-else {
-
+$title=setSlocialData('title',$instance);
+if(empty($title)) {
 $title = __( 'New title', 'wpb_widget_domain' );
-
-}
-if ( isset( $instance[ 'facebook' ] ) ) {
-
-$facebook = $instance[ 'facebook' ];
-
 }
 
-else {
-
+$facebook=setSlocialData('facebook',$instance);
+if(empty($facebook)) { 
 $facebook = __( 'Facebook Link', 'wpb_widget_domain' );
-
 }
 
-if ( isset( $instance[ 'twitter' ] ) ) {
 
-$twitter = $instance[ 'twitter' ];
-
-}
-
-else {
-
+$twitter=setSlocialData('twitter',$instance);
+if(empty($twitter)){
 $twitter = __( 'Twitter Link', 'wpb_widget_domain' );
-
 }
 
-if ( isset( $instance[ 'rss' ] ) ) {
 
-$rss = $instance[ 'rss' ];
-
-}
-
-else {
-
+$rss=setSlocialData('rss',$instance);
+if(empty($rss)){
 $rss = __( 'Rss Link', 'wpb_widget_domain' );
-
-}
-// Widget admin form
-if ( isset( $instance[ 'linkedin' ] ) ) {
-
-$linkedin = $instance[ 'linkedin' ];
-
 }
 
-else {
 
+$linkedin=setSlocialData('linkedin',$instance);
+if(empty($linkedin)){
 $linkedin = __( 'Linkedin Link', 'wpb_widget_domain' );
-
 }
 ?>
 
@@ -210,7 +168,14 @@ return $instance;
 } // Class wpb_widget ends here
 
  
+function setSlocialData($text_id,$instance){
+if ( isset( $instance[ $text_id ] ) ) {
 
+return $instance[$text_id];
+
+}
+	
+}
 // Register and load the widget
 
 function wpb_load_widget() {
@@ -234,19 +199,9 @@ function __construct() {
 
 parent::__construct(
 
-// Base ID of your widget
-
 'wpb_widget_c',
 
- 
-
-// Widget name will appear in UI
-
 __('Choice Category Post', 'wpb_widget_domain_c'),
-
- 
-
-// Widget description
 
 array( 'description' => __( 'This widget for view latest post selected category', 'wpb_widget_domain_c' ), )
 
@@ -254,9 +209,6 @@ array( 'description' => __( 'This widget for view latest post selected category'
 
 }
 
-// Creating widget front-end
-
-// This is where the action happens
 
 public function widget( $args, $instance ) {
 

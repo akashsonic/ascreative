@@ -181,16 +181,16 @@ function as_theme_options_validate( $input ) {
 
 	
 	// Footer Area Text
-	$output["as_footer_area_text"]=setFooterAreaText("as_footer_area_text",$input);
-	$output["upload_header_logo"]=setFooterAreaText("upload_header_logo",$input);
-	$output["upload_Footer_logo"]=setFooterAreaText("upload_Footer_logo",$input);
+	$output["as_footer_area_text"]=setThemeoptionData("as_footer_area_text",$input);
+	$output["upload_header_logo"]=setThemeoptionData("upload_header_logo",$input);
+	$output["upload_Footer_logo"]=setThemeoptionData("upload_Footer_logo",$input);
 		
 	return apply_filters( 'as_theme_options_validate', $output, $input );
 
 }
 
 
-function setFooterAreaText ( $text_id, $input ){
+function setThemeoptionData ( $text_id, $input ){
 	if ( isset( $input[ $text_id ] ) && ! empty( $input[ $text_id ] ) )
 		return strip_tags( $input[ $text_id ] );
 }
