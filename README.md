@@ -66,7 +66,7 @@
 
 ##Home Page##
 
-1. Go to ** Pages > Add new ** in the WordPress menu
+1. Go to **Pages > Add new** in the WordPress menu
 
 2. Enter page title name "Home"
 
@@ -83,7 +83,7 @@
 
 ##Home Page Based Slider##
 
-1. Go to ** Based Slider > Add new ** in the WordPress menu
+1. Go to **Based Slider > Add new** in the WordPress menu
 
 2. Enter slider title name
 
@@ -95,7 +95,7 @@
 
 ##Set Home Child page ##
 
-1. Go to ** Page > Add new ** in the WordPress menu
+1. Go to **Page > Add new** in the WordPress menu
 
 2. Enter slider title name
 
@@ -115,7 +115,7 @@
 
 ##Setup Widgets ##
 
-1. Go to **Appearance > Widgets ** in the WordPress menu
+1. Go to **Appearance > Widgets** in the WordPress menu
 
 2. Now remove all widget show in footer area
 
@@ -123,13 +123,13 @@
 
 ### Set Choice Category Post Widgets ###
 
-1. Go to **Post > Categories ** in the WordPress menu
+1. Go to **Post > Categories** in the WordPress menu
 
 2. Enter Category name
 
 3. Click Add new category button
 
-4. Go to **Post > Add New ** in the WordPress menu
+4. Go to **Post > Add New** in the WordPress menu
 
 5. Enter Post Title & Content
 
@@ -139,7 +139,7 @@
 
 8. Repeat step 4 to 7 and create postes You need
 
-9. Go to **Appearance > Widgets ** in the WordPress menu
+9. Go to **Appearance > Widgets** in the WordPress menu
 
 10. Go Footer area and click Choice Category Post widget
 
@@ -153,7 +153,7 @@
 
 ### Set Text Widgets ###
 
-1. Go to **Appearance > Widgets ** in the WordPress menu
+1. Go to **Appearance > Widgets** in the WordPress menu
 
 2. Go Footer area and click Text widget
 
@@ -165,7 +165,7 @@
 
 ### Set Social Links Widgets ###
 
-1. Go to **Appearance > Widgets ** in the WordPress menu
+1. Go to **Appearance > Widgets** in the WordPress menu
 
 2. Go Footer area and click Social Links Widget
 
@@ -177,11 +177,11 @@
 
 ### Set Custom Menu Widgets ###
 
-1. Go to **Appearance > Menus ** in the WordPress menu
+1. Go to **Appearance > Menus** in the WordPress menu
 
 2. Create new menu
 
-3. Go to **Appearance > Widgets ** in the WordPress menu
+3. Go to **Appearance > Widgets** in the WordPress menu
 
 4. Go Footer area and click Custom Menu widget
 
