@@ -142,7 +142,7 @@ add_action( 'admin_print_styles', 'wp_admr_pro_plus_admin_styles' );
 
 function setEmptyData($text_Data,$Input){
 	if(empty($Input)){
-		return get_template_directory_uri()."/images/".$text_Data";
+		return get_template_directory_uri()."/images/".$text_Data;
 	}else{
 		return 	$Input;
 	}
