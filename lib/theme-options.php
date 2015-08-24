@@ -78,10 +78,8 @@ function as_footer_area_text() {
 }
 
 function upload_header_logo() {
-	$options = as_get_theme_options();
-	$headerlogo=esc_attr( $options[ 'upload_header_logo' ] );
-	$headerlogo=setEmptyData('logo.png',$headerlogo);
-	
+	$headerlogo =  setOptionData('upload_header_logo','logo.png')
+
 		?>
 	<input class="text"  type="hidden" name="" id="upload_Header_logo_Default" value="<?php echo get_template_directory_uri()."/images/logo.png"; ?>" style="  width: 50%;" />
 	<input class="text"  type="hidden" name="as_theme_options[upload_header_logo]" id="upload_header_logo" value="<?php echo $headerlogo;?>" style="  width: 50%;" />
@@ -93,9 +91,8 @@ function upload_header_logo() {
 	<?php
 }
 function upload_Footer_logo() {
-	$footer_options = as_get_theme_options();
-	$footerlogo=esc_attr( $footer_options[ 'upload_Footer_logo' ] );
-	$footerlogo=setEmptyData('footer-logo.png',$footerlogo);
+	$footerlogo =  setOptionData('upload_Footer_logo','footer-logo.png')
+
 	
 		?>
 	<input class="text"  type="hidden" name="as_theme_options[upload_Footer_logo]" id="upload_Footer_logo" value="<?php echo $footerlogo;?>" style="  width: 50%;" />
@@ -140,11 +137,13 @@ function upload_Footer_logo() {
 }
 add_action( 'admin_print_styles', 'wp_admr_pro_plus_admin_styles' );
 
-function setEmptyData($text_Data,$Input){
-	if(empty($Input)){
+function setoptionData($text_id,$text_Data){
+	$data_options = as_get_theme_options();
+	$returndata=esc_attr( $data_options[$text_id] );
+	if(empty($returndata)){
 		return get_template_directory_uri()."/images/".$text_Data;
 	}else{
-		return 	$Input;
+		return 	$returndata;
 	}
 }
 
