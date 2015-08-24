@@ -80,9 +80,8 @@ function as_footer_area_text() {
 function upload_header_logo() {
 	$options = as_get_theme_options();
 	$headerlogo=esc_attr( $options[ 'upload_header_logo' ] );
-	if(empty($headerlogo)){
-		$headerlogo=get_template_directory_uri()."/images/logo.png";
-	}
+	$headerlogo=setEmptyData('logo.png',$headerlogo);
+	
 		?>
 	<input class="text"  type="hidden" name="" id="upload_Header_logo_Default" value="<?php echo get_template_directory_uri()."/images/logo.png"; ?>" style="  width: 50%;" />
 	<input class="text"  type="hidden" name="as_theme_options[upload_header_logo]" id="upload_header_logo" value="<?php echo $headerlogo;?>" style="  width: 50%;" />
@@ -96,9 +95,8 @@ function upload_header_logo() {
 function upload_Footer_logo() {
 	$footer_options = as_get_theme_options();
 	$footerlogo=esc_attr( $footer_options[ 'upload_Footer_logo' ] );
-	if($footerlogo==""){
-		$footerlogo=get_template_directory_uri()."/images/footer-logo.png";
-	}
+	$footerlogo=setEmptyData('footer-logo.png',$footerlogo);
+	
 		?>
 	<input class="text"  type="hidden" name="as_theme_options[upload_Footer_logo]" id="upload_Footer_logo" value="<?php echo $footerlogo;?>" style="  width: 50%;" />
 	<img src="<?php echo $footerlogo; ?>" id="Footer_Logo_Image" style="  width: 200px;  height: 60px;" />
@@ -141,6 +139,15 @@ function upload_Footer_logo() {
 	<?php
 }
 add_action( 'admin_print_styles', 'wp_admr_pro_plus_admin_styles' );
+
+function setEmptyData($text_Data,$Input){
+	if(empty($Input)){
+		return get_template_directory_uri()."/images/".$text_Data";
+	}else{
+		return 	$Input;
+	}
+}
+
 function wp_admr_pro_plus_admin_styles() {
 
 
